@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS // NETWORK TRACE</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="network" class="crt-flicker">
+  <div class="scanlines"></div>
+
+  <div id="app">
+    <!-- GLOBAL HUD HEADER -->
+    <header class="hud-header">
+      <div class="hud-brand">
+        <span class="status-indicator"></span>
+        <div class="hud-logo">NEXUS // SHADOW TRACE</div>
+        <span class="hud-tag">v4.0.9</span>
+      </div>
+
+      <div class="hud-stats">
+        <div class="hud-stat-item">SYSTEM: <span class="val">ONLINE</span></div>
+        <div class="hud-stat-item">SESSION: <span class="val" id="hudSessionId">NX-8492-7719</span></div>
+        <div class="hud-stat-item">TIME: <span class="val" id="hudLiveTime">00:00:00 UTC</span></div>
+        <div class="hud-stat-item">STATUS: <span class="val" style="color:var(--neon-green)">ACTIVE</span></div>
+        <button id="soundToggleBtn" class="sound-toggle-btn">🔊 SOUND: ON</button>
+      </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <main class="page-container">
+      <div class="network-wrapper">
+        <div class="cyber-panel" style="padding:12px 20px; display:flex; justify-content:space-between; align-items:center;">
+          <div class="panel-title">NETWORK TRACE // ACTIVE NODE MATRIX</div>
+          <div style="display:flex; gap:20px; font-size:0.85rem;">
+            <div>PACKETS: <span id="packetCountVal" style="color:var(--cyan-primary); font-weight:bold;">1842</span></div>
+            <div>NODES: <span style="color:var(--neon-green); font-weight:bold;">13</span></div>
+            <div>ENCRYPTION: <span style="color:var(--amber-warning); font-weight:bold;">AES-SIM</span></div>
+            <div>TRACE: <span style="color:var(--neon-green); font-weight:bold;">ACTIVE</span></div>
+          </div>
+        </div>
+
+        <div class="network-canvas-container">
+          <div class="alert-banner">ANOMALOUS TRAFFIC DETECTED // CONNECTION STABILIZED</div>
+          <canvas id="networkCanvas"></canvas>
+        </div>
+
+        <div class="cyber-panel" style="display:flex; flex-direction:column; gap:10px;">
+          <div style="font-size:0.8rem; color:var(--text-muted); letter-spacing:1px;">LIVE PACKET ACTIVITY STREAM</div>
+          <div id="networkLogBox" class="network-events-log">
+            <div>PACKET 00182 → TARGET [SUCCESS]</div>
+            <div>PACKET 00183 → NODE-07 [ROUTED]</div>
+            <div>PACKET 00184 → ENCRYPTED [DECODING]</div>
+            <div>PACKET 00185 → TARGET [ESTABLISHED]</div>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:6px;">
+            <div style="font-size:0.85rem; color:var(--neon-green); font-weight:bold;">
+              TARGET CONNECTION ESTABLISHED
+            </div>
+
+            <button class="cyber-btn" data-target="final.html">
+              [ COMPLETE OPERATION ]
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="hud-footer">
+      FICTIONAL CYBERSECURITY SIMULATION | NO REAL SYSTEMS ACCESSED
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

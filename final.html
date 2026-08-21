@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS // MISSION COMPLETE</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="final" class="crt-flicker">
+  <div class="scanlines"></div>
+
+  <div id="app">
+    <!-- GLOBAL HUD HEADER -->
+    <header class="hud-header">
+      <div class="hud-brand">
+        <span class="status-indicator"></span>
+        <div class="hud-logo">NEXUS // SHADOW TRACE</div>
+        <span class="hud-tag">v4.0.9</span>
+      </div>
+
+      <div class="hud-stats">
+        <div class="hud-stat-item">SYSTEM: <span class="val">ONLINE</span></div>
+        <div class="hud-stat-item">SESSION: <span class="val" id="hudSessionId">NX-8492-7719</span></div>
+        <div class="hud-stat-item">TIME: <span class="val" id="hudLiveTime">00:00:00 UTC</span></div>
+        <div class="hud-stat-item">STATUS: <span class="val" style="color:var(--neon-green)">COMPLETED</span></div>
+        <button id="soundToggleBtn" class="sound-toggle-btn">🔊 SOUND: ON</button>
+      </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <main class="page-container">
+      <div class="final-layout">
+        <div class="final-card cyber-panel">
+          <div class="final-title">MISSION COMPLETE</div>
+
+          <div class="mission-summary-grid">
+            <div class="summary-item">
+              <div class="key">OPERATION ID</div>
+              <div class="val">SHADOW TRACE</div>
+            </div>
+            <div class="summary-item">
+              <div class="key">FINAL STATUS</div>
+              <div class="val" style="color:var(--neon-green)">COMPLETED (100%)</div>
+            </div>
+            <div class="summary-item">
+              <div class="key">TARGET ENVIRONMENT</div>
+              <div class="val">SIMULATED ROOT</div>
+            </div>
+            <div class="summary-item">
+              <div class="key">NETWORK CHANNEL</div>
+              <div class="val">ENCRYPTED // ACTIVE</div>
+            </div>
+          </div>
+
+          <div style="font-family:var(--font-display); font-size:0.9rem; color:var(--cyan-primary); letter-spacing:2px; margin-bottom:12px; text-align:left;">
+            SYSTEM OPERATION TIMELINE LOG:
+          </div>
+
+          <div class="timeline-list">
+            <div class="timeline-step">✔ 01 — Terminal initialized</div>
+            <div class="timeline-step">✔ 02 — Virtual target identified</div>
+            <div class="timeline-step">✔ 03 — Location trace simulated</div>
+            <div class="timeline-step">✔ 04 — Device simulation completed</div>
+            <div class="timeline-step">✔ 05 — Call simulation completed</div>
+            <div class="timeline-step">✔ 06 — Network trace completed</div>
+            <div class="timeline-step" style="font-weight:bold; color:var(--cyan-primary);">✔ 07 — Operation completed</div>
+          </div>
+
+          <div style="display:flex; justify-content:center; gap:20px;">
+            <button class="cyber-btn" data-target="index.html">
+              [ RESTART OPERATION ]
+            </button>
+
+            <button class="cyber-btn cyber-btn-cyan" data-target="index.html">
+              [ RETURN HOME ]
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="hud-footer">
+      FICTIONAL CYBERSECURITY SIMULATION | NO REAL SYSTEMS ACCESSED
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

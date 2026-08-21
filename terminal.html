@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS // SECURE TERMINAL</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="terminal" class="crt-flicker">
+  <div class="scanlines"></div>
+
+  <div id="app">
+    <!-- GLOBAL HUD HEADER -->
+    <header class="hud-header">
+      <div class="hud-brand">
+        <span class="status-indicator"></span>
+        <div class="hud-logo">NEXUS // SHADOW TRACE</div>
+        <span class="hud-tag">v4.0.9</span>
+      </div>
+
+      <div class="hud-stats">
+        <div class="hud-stat-item">SYSTEM: <span class="val">ONLINE</span></div>
+        <div class="hud-stat-item">SESSION: <span class="val" id="hudSessionId">NX-8492-7719</span></div>
+        <div class="hud-stat-item">TIME: <span class="val" id="hudLiveTime">00:00:00 UTC</span></div>
+        <div class="hud-stat-item">STATUS: <span class="val" style="color:var(--neon-green)">ACTIVE</span></div>
+        <button id="soundToggleBtn" class="sound-toggle-btn">🔊 SOUND: ON</button>
+      </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <main class="page-container">
+      <div class="terminal-dashboard-grid">
+        <!-- PRIMARY MAIN TERMINAL PANEL -->
+        <div class="cyber-panel main-terminal-panel">
+          <div class="cyber-panel-header">
+            <div class="panel-title">SECURE TERMINAL // PRIMARY CLI [TERM-01]</div>
+            <div style="font-size: 0.8rem; color: var(--neon-green);">ACCESS LEVEL: ROOT</div>
+          </div>
+
+          <div id="terminalScreen" class="terminal-screen">
+            <!-- Terminal lines output automatically and via commands -->
+          </div>
+
+          <div class="terminal-input-row">
+            <span class="terminal-prompt-label">NEXUS@SYSTEM:~$</span>
+            <input type="text" id="terminalInput" class="terminal-input" placeholder="Type a command (e.g. 'help', 'scan', 'hack', 'trace')..." autofocus autocomplete="off" spellcheck="false">
+            <span class="blinking-cursor"></span>
+          </div>
+
+          <div class="terminal-footer-actions">
+            <button class="cyber-btn" data-target="location.html">
+              [ CONTINUE TO TRACE ]
+            </button>
+          </div>
+        </div>
+
+        <!-- SECONDARY AUTO-RUNNING TERMINALS -->
+        <div class="side-terminals-column">
+          <!-- SIDE TERMINAL 01: HEX & RSA DECRYPTION -->
+          <div class="cyber-panel side-terminal-panel">
+            <div class="cyber-panel-header">
+              <div class="panel-title" style="font-size:0.8rem;">DECRYPTION STREAM [TERM-02]</div>
+              <span class="status-indicator"></span>
+            </div>
+            <div id="sideTerminal1" class="side-terminal-screen">
+              <!-- Auto-running hex memory stream -->
+            </div>
+          </div>
+
+          <!-- SIDE TERMINAL 02: PACKET SNIFFER -->
+          <div class="cyber-panel side-terminal-panel">
+            <div class="cyber-panel-header">
+              <div class="panel-title" style="font-size:0.8rem; color:var(--cyan-primary);">PACKET SNIFFER [TERM-03]</div>
+              <span class="status-indicator" style="background:var(--cyan-primary); box-shadow:0 0 8px var(--cyan-primary);"></span>
+            </div>
+            <div id="sideTerminal2" class="side-terminal-screen">
+              <!-- Auto-running packet sniffer stream -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="hud-footer">
+      FICTIONAL CYBERSECURITY SIMULATION | NO REAL SYSTEMS ACCESSED
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

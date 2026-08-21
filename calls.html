@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS // CALL INTERCEPTION SIMULATION</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="calls" class="crt-flicker">
+  <div class="scanlines"></div>
+
+  <div id="app">
+    <!-- GLOBAL HUD HEADER -->
+    <header class="hud-header">
+      <div class="hud-brand">
+        <span class="status-indicator"></span>
+        <div class="hud-logo">NEXUS // SHADOW TRACE</div>
+        <span class="hud-tag">v4.0.9</span>
+      </div>
+
+      <div class="hud-stats">
+        <div class="hud-stat-item">SYSTEM: <span class="val">ONLINE</span></div>
+        <div class="hud-stat-item">SESSION: <span class="val" id="hudSessionId">NX-8492-7719</span></div>
+        <div class="hud-stat-item">TIME: <span class="val" id="hudLiveTime">00:00:00 UTC</span></div>
+        <div class="hud-stat-item">STATUS: <span class="val" style="color:var(--neon-green)">ACTIVE</span></div>
+        <button id="soundToggleBtn" class="sound-toggle-btn">🔊 SOUND: ON</button>
+      </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <main class="page-container">
+      <div class="calls-layout">
+        <div class="incoming-call-box cyber-panel">
+          <div class="caller-avatar">
+            📡
+          </div>
+
+          <div style="font-family:var(--font-display); color:var(--amber-warning); letter-spacing:2px; font-size:1.1rem; margin-bottom:6px;">
+            INCOMING SIGNAL INTERCEPT
+          </div>
+          
+          <div style="font-size:1.4rem; color:var(--text-main); font-weight:bold; letter-spacing:2px; margin-bottom:12px;">
+            UNKNOWN CONTACT
+          </div>
+
+          <div style="font-size:1.2rem; color:var(--cyan-primary); letter-spacing:3px; margin-bottom:16px;">
+            +91 •••• ••4821
+          </div>
+
+          <div style="display:flex; justify-content:center; gap:20px; font-size:0.8rem; color:var(--text-muted); margin-bottom:20px;">
+            <div>SIGNAL: <span style="color:var(--neon-green)">93%</span></div>
+            <div>CHANNEL: <span style="color:var(--cyan-primary)">ENCRYPTED</span></div>
+            <div>STATUS: <span id="callStatusLabel" style="color:var(--amber-warning)">WAITING...</span></div>
+          </div>
+
+          <!-- WAVEFORM CANVAS -->
+          <canvas id="waveformCanvas" class="waveform-canvas" width="480" height="120"></canvas>
+
+          <!-- LIVE DURATION TIMER -->
+          <div style="font-family:var(--font-display); font-size:1.5rem; color:var(--neon-green); margin-bottom:12px;">
+            <span id="callTimerVal">00:00</span>
+          </div>
+
+          <!-- SUBTITLES TICKER -->
+          <div id="callSubtitlesBox" class="call-subtitles">
+            [ READY TO INTERCEPT SIGNAL ]
+          </div>
+
+          <div style="display:flex; justify-content:center; gap:16px; margin-bottom:24px;">
+            <button id="acceptCallBtn" class="cyber-btn" style="min-width:140px;">
+              [ ACCEPT ]
+            </button>
+            <button id="declineCallBtn" class="cyber-btn cyber-btn-red" style="min-width:140px;">
+              [ DECLINE ]
+            </button>
+          </div>
+
+          <div style="display:flex; justify-content:flex-end;">
+            <button class="cyber-btn cyber-btn-cyan" data-target="network.html">
+              [ NEXT: NETWORK TRACE ]
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="hud-footer">
+      FICTIONAL CYBERSECURITY SIMULATION | NO REAL SYSTEMS ACCESSED
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
